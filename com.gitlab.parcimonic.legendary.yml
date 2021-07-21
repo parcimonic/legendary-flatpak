@@ -1,0 +1,23 @@
+app-id: com.gitlab.parcimonic.legendary
+runtime: org.freedesktop.Platform
+runtime-version: '20.08'
+sdk: org.freedesktop.Sdk
+command: legendary
+
+finish-args:
+  - --share=network
+  # Only X11 for now
+  - --share=ipc
+  - --socket=x11
+  # Only video for now, will
+  # need more access for
+  # controllers later
+  - --device=dri
+  # Sound
+  - --socket=pulseaudio
+  # Needed to keep installed games
+  - --persist=.
+
+modules:
+  # Generated with `python flatpak-pip-generator legendary-gl`
+  - legendary-python.json

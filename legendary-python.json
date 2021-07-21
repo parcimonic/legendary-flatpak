@@ -1,0 +1,39 @@
+{
+    "name": "python3-legendary-gl",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"legendary-gl\" --no-build-isolation"
+    ],
+    "sources": [
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/4f/5a/597ef5911cb8919efe4d86206aa8b2658616d676a7088f0825ca08bd7cb8/urllib3-1.26.6.tar.gz",
+            "sha256": "f57b4c16c62fa2760b7e3d97c35b255512fb6b59a259730f36ba32ce9f8e342f"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/cb/38/4c4d00ddfa48abe616d7e572e02a04273603db446975ab46bbcd36552005/idna-3.2.tar.gz",
+            "sha256": "467fbad99067910785144ce333826c71fb0e63a425657295239737f7ecd125f3"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/37/fd/05a04d7e14548474d30d90ad0db5d90ee2ba55cd967511a354cf88b534f1/charset-normalizer-2.0.3.tar.gz",
+            "sha256": "c46c3ace2d744cfbdebceaa3c19ae691f53ae621b39fd7570f59d14fb7f2fd12"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/6d/78/f8db8d57f520a54f0b8a438319c342c61c22759d8f9a1cd2e2180b5e5ea9/certifi-2021.5.30.tar.gz",
+            "sha256": "2bbf76fd432960138b3ef6dda3dde0544f27cbf8546c458e60baf371917ba9ee"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/e7/01/3569e0b535fb2e4a6c384bdbed00c55b9d78b5084e0fb7f4d0bf523d7670/requests-2.26.0.tar.gz",
+            "sha256": "b8aa58f8cf793ffd8782d3d8cb19e66ef36f7aba4353eec859e74678b01b07a7"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/6f/91/88e8c55a140ea01d40d290f313647d0a543bdc2430764a255270ea872b6f/legendary-gl-0.20.6.tar.gz",
+            "sha256": "32595bdf270263022d84d95bbea10d87b6bd1b4994b4418244e98684b60a6ffe"
+        }
+    ]
+}
