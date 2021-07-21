@@ -10,6 +10,14 @@ Please *do not report* bugs or issues with this version of legendary to the main
 
 If/when this project is more mature, I'll contact derrod and check if we can make this an official supported package.
 
+## Building
+
+If you've never done this before, please follow the the [documentation](https://docs.flatpak.org/en/latest/first-build.html#test-the-build) up to step 5. This will set you up with all current pre-requirements for this project and (hopefully) give you a bit of understanding about building flatpaks.
+
+Then you can run `flatpak-builder --user --install --force-clean build-dir com.gitlab.parcimonic.legendary.yml` to build and install this package.
+
+Run it with `flatpak run com.gitlab.parcimonic.legendary`. Use `flatpak run --command=bash com.gitlab.parcimonic.legendary` to open a bash shell in the sandbox.
+
 ## Contributing
 
 When submitting changes to the Flatpak manifest, please try to be as descriptive as possible, since the plan here is to learn more about Flatpak.
