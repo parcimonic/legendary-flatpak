@@ -1,0 +1,10 @@
+name: wine64
+buildsystem: simple
+sources:
+  - type: archive
+    url: https://dl.winehq.org/wine/source/6.x/wine-6.12.tar.xz
+    sha512: 6d5646c44e656a88eb25174ce16038a8b0e1495c3deed8e959825cb26059fdda6e6519afeaeb28e4070fc5e05d7a3e1e5812ef09c31875f14f9233ba6a52f14c
+build-commands:
+  - ./configure --enable-win64 --prefix=/app
+  - make -j$(nproc)
+  - make install
