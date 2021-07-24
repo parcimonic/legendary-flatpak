@@ -1,0 +1,11 @@
+default:
+  before_script:
+    - apt-get update --quiet --yes
+    - apt-get install --quiet --yes flatpak flatpak-builder
+    - flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    - flatpak install --noninteractive flathub org.freedesktop.Platform//20.08 org.freedesktop.Sdk//20.08
+
+build:
+  stage: build
+  script:
+    - flatpak-builder build-dir com.gitlab.parcimonic.legendary.yml
