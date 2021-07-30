@@ -8,4 +8,8 @@ default:
 build:
   stage: build
   script:
-    - flatpak-builder build-dir com.gitlab.parcimonic.legendary.yml
+    - flatpak-builder --repo=artifact-repo build-dir com.gitlab.parcimonic.legendary.yml
+    - flatpak build-bundle artifact-repo legendary.flatpak com.gitlab.parcimonic.legendary
+  artifacts:
+    paths:
+      - legendary.flatpak
