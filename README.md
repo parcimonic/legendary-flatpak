@@ -18,6 +18,10 @@ Then you can run `flatpak-builder --user --install --force-clean build-dir com.g
 
 Run it with `flatpak run com.gitlab.parcimonic.legendary`. Use `flatpak run --command=bash com.gitlab.parcimonic.legendary` to open a bash shell in the sandbox.
 
+## Installing
+
+You can get the GitLab build artifacts [here](https://gitlab.com/parcimonic/legendary-flatpak/-/jobs), then install using `flatpak install legendary.flatpak`.
+
 ## Contributing
 
 When submitting changes to the Flatpak manifest, please try to be as descriptive as possible, since the plan here is to learn more about Flatpak.
