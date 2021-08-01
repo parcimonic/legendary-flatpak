@@ -2,8 +2,8 @@ name: wine64
 buildsystem: simple
 sources:
   - type: archive
-    url: https://dl.winehq.org/wine/source/6.x/wine-6.13.tar.xz
-    sha512: 7e1a16873f1a160960e44a38c7af743ea3a10bc545c5724745733d14093188134b74a4f60fbc54f38546b0ed053209b67e35ea131a9cda58ec8041855100c5ee
+    url: https://dl.winehq.org/wine/source/6.x/wine-6.14.tar.xz
+    sha512: 261858dcf11604a6078b39faf64bd05288194647f8397efe03abcda1934ec5452e18f85dbb269e728ef532ac8ad39af5bbf5d8603f3598a20e2ef16f60405581
 build-options:
   append-pkg-config-path: /usr/lib/sdk/mingw-w64/lib/pkgconfig
   append-path: /usr/lib/sdk/mingw-w64/bin
