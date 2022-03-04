@@ -6,7 +6,68 @@ base: org.winehq.Wine
 base-version: stable-21.08
 command: legendary
 
+# Copied from https://github.com/flathub/org.winehq.Wine/blob/fca5b6d6c5e95db3d2515c34c80c9333e2e3537d/org.winehq.Wine.yml
+add-extensions:
+  org.freedesktop.Platform.Compat.i386:
+    directory: lib/i386-linux-gnu
+    version: '21.08'
+
+  org.freedesktop.Platform.Compat.i386.Debug:
+    directory: lib/debug/lib/i386-linux-gnu
+    version: '21.08'
+    no-autodownload: true
+
+  org.freedesktop.Platform.GL32:
+    directory: lib/i386-linux-gnu/GL
+    version: '1.4'
+    versions: 21.08;1.4
+    subdirectories: true
+    no-autodownload: true
+    autodelete: false
+    add-ld-path: lib
+    merge-dirs: vulkan/icd.d;glvnd/egl_vendor.d;OpenCL/vendors;lib/dri;lib/d3d;vulkan/explicit_layer.d
+    download-if: active-gl-driver
+    enable-if: active-gl-driver
+
+  org.freedesktop.Platform.VAAPI.Intel.i386:
+    directory: lib/i386-linux-gnu/dri/intel-vaapi-driver
+    version: '21.08'
+    subdirectories: true
+    no-autodownload: true
+    autodelete: false
+    add-ld-path: lib
+    download-if: active-gl-driver
+    enable-if: active-gl-driver
+
+  org.freedesktop.Platform.ffmpeg-full:
+    directory: lib/ffmpeg
+    add-ld-path: .
+    version: '21.08'
+    autodelete: false
+
+  org.freedesktop.Platform.ffmpeg_full.i386:
+    directory: lib32/ffmpeg
+    add-ld-path: .
+    version: '21.08'
+    autodelete: false
+
+  org.winehq.Wine.gecko:
+    directory: share/wine/gecko
+    bundle: true
+
+  org.winehq.Wine.mono:
+    directory: share/wine/mono
+    bundle: true
+
+  org.winehq.Wine.DLLs:
+    directory: dlls
+    subdirectories: true
+    merge-dirs: lib;lib32;
+    version: stable-21.08
+    versions: stable;stable-21.08;
+
 finish-args:
+  # Network access
   - --share=network
   # Only X11 for now
   - --share=ipc
@@ -19,6 +80,8 @@ finish-args:
   - --socket=pulseaudio
   # Needed to keep installed games
   - --persist=.
+  # Needed for 32 bits wine
+  - --allow=multiarch
 
 modules:
   # Generated with `python flatpak-pip-generator legendary-gl`
