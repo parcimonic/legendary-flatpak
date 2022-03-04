@@ -1,9 +1,9 @@
 app-id: com.gitlab.parcimonic.legendary
+sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Platform
 runtime-version: '21.08'
-sdk: org.freedesktop.Sdk
-sdk-extensions:
-  - org.freedesktop.Sdk.Extension.mingw-w64
+base: org.winehq.Wine
+base-version: stable-21.08
 command: legendary
 
 finish-args:
@@ -21,11 +21,5 @@ finish-args:
   - --persist=.
 
 modules:
-  # Wine 32 bits
-  # TODO
-
-  # Wine 64 bits
-  - wine64.yml
-
   # Generated with `python flatpak-pip-generator legendary-gl`
   - legendary-python.json
