@@ -72,10 +72,9 @@ finish-args:
   # Only X11 for now
   - --share=ipc
   - --socket=x11
-  # Only video for now, will
-  # need more access for
-  # controllers later
-  - --device=dri
+  # Needs to be "all"
+  # for controller support
+  - --device=all
   # Sound
   - --socket=pulseaudio
   # Needed to keep installed games
