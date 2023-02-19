@@ -1,5 +1,11 @@
 # legendary-flatpak
 
+## Archival notice
+
+I'm not actively working on this project and have no plans to update it in the foreseeable future.
+
+---
+
 This is an *unnoficial* version of [legendary](https://github.com/derrod/legendary) built with Flatpak.
 
 I'm doing this just to learn more about Flatpak and obviously to use the sandbox for games. Inspired by [Steam](https://github.com/flathub/com.valvesoftware.Steam) and [Bottles](https://github.com/flathub/com.usebottles.bottles).
